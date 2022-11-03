@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # Database
 client = pymongo.MongoClient("localhost", 27017)
-db = client.user_login_system
+db = client.py_login
 
 
 # Routes
@@ -17,6 +17,6 @@ def home():
     return render_template("home.html")
 
 
-@app.route("/dashboard")
+@app.route("/dashboard/")
 def dashboard():
     return render_template("dashboard.html")
