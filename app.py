@@ -1,11 +1,24 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, session, redirect
+from functools import wraps
 import pymongo
 
 app = Flask(__name__)
+app.secret_key = b"\xfa\x1aX\x9eP\xb2\xff\x8c\xe9C\xf6R\x07\x05\xe7\x07"
 
 # Database
 client = pymongo.MongoClient("localhost", 27017)
 db = client.py_login
+
+# Decorators
+def login_required(f):
+    @wraps(f)
+    def wrap(*args, **kwargs):
+        if "logged_in" in session:
+            return f(*args, **kwargs)
+        else:
+            return redirect("/")
+
+    return wrap
 
 
 # Routes
@@ -18,5 +31,6 @@ def home():
 
 
 @app.route("/dashboard/")
+@login_required
 def dashboard():
     return render_template("dashboard.html")
