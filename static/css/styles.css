@@ -4,19 +4,20 @@
 
 /* Setup */
 :root {
+  --grey-black: #1c1c1c;
   --black: #000000;
   --almost-black: #263238;
   --white: #ffffff;
-  --almost-white: #FBFBFB;
-  --grey-light: #CFD8DC;
-  --grey: #B0BEC5;
-  --grey-medium: #78909C;
-  --grey-dark: #455A64;
-  --primary: #1E88E5;
-  --primary-dark: #1976D2;
-  --secondary: #CFD8DC;
-  --secondary-dark: #B0BEC5;
-  --red: #EF4836;
+  --almost-white: #fbfbfb;
+  --grey-light: #cfd8dc;
+  --grey: #b0bec5;
+  --grey-medium: #78909c;
+  --grey-dark: #455a64;
+  --primary: #1e88e5;
+  --primary-dark: #1976d2;
+  --secondary: #cfd8dc;
+  --secondary-dark: #b0bec5;
+  --red: #ef4836;
 }
 
 * {
@@ -30,7 +31,7 @@ body {
   font-size: 18px;
   line-height: 28px;
   color: var(--black);
-  background: var(--grey-light);
+  background: var(--grey-black);
 }
 
 /* Typography */
@@ -69,7 +70,7 @@ p {
   margin: 0 30px 60px;
   padding: 20px 40px;
   width: 460px;
-  box-shadow: 0 8px 26px -4px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 26px -4px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   background: var(--white);
 }
@@ -90,7 +91,7 @@ p {
 
 /* Forms */
 form {
-  transition: opacity .15s ease;
+  transition: opacity 0.15s ease;
 }
 
 form.loading {
@@ -116,10 +117,10 @@ label {
   color: var(--almost-black);
   border: 1px solid var(--grey);
   border-radius: 4px;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   display: block;
   background: var(--almost-white);
-  transition: border-color .15s ease;
+  transition: border-color 0.15s ease;
 }
 
 .field:focus {
@@ -156,7 +157,7 @@ label {
   cursor: pointer;
   display: inline-block;
   background: var(--primary);
-  transition: color .15s ease, background-color .15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease;
 }
 
 .btn:hover {
@@ -172,7 +173,7 @@ label {
   background: var(--secondary-dark);
 }
 
-input[type=submit] {
+input[type='submit'] {
   margin: 34px auto 24px;
   display: block;
 }
