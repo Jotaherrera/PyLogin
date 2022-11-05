@@ -4,12 +4,12 @@ $('form[name=signup_form').submit(function (e) {
   var data = $form.serialize();
 
   $.ajax({
-    url: '/user/sign-up',
+    url: '/sign-up',
     type: 'POST',
     data: data,
     dataType: 'json',
     success: function (resp) {
-      window.location.href = '/dashboard/';
+      window.location.href = '/account';
     },
     error: function (resp) {
       $error.text(resp.responseJSON.error).removeClass('error--hidden');
@@ -25,12 +25,12 @@ $('form[name=login_form').submit(function (e) {
   var data = $form.serialize();
 
   $.ajax({
-    url: '/user/login',
+    url: '/log-in',
     type: 'POST',
     data: data,
     dataType: 'json',
     success: function (resp) {
-      window.location.href = '/dashboard/';
+      window.location.href = '/account';
     },
     error: function (resp) {
       $error.text(resp.responseJSON.error).removeClass('error--hidden');
