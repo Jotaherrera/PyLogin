@@ -8,6 +8,7 @@ app.secret_key = b"\xfa\x1aX\x9eP\xb2\xff\x8c\xe9C\xf6R\x07\x05\xe7\x07"
 
 # Database
 client = pymongo.MongoClient("localhost", 27017)
+# Set your collection.database
 db = client.py_login
 
 # Decorators
