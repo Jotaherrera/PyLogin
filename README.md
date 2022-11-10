@@ -26,8 +26,8 @@ This application provides:
 ### Quickstart
 _________________
 
-1. On your terminal access the project folder and activate the virtual environment: source venv/scripts/activate
-2. On the same path start your Flask service: Flask --app app.py --debug run
+1. On your terminal access the project folder and activate the virtual environment: *source venv/scripts/activate*
+2. On the same path start your Flask service: *flask --app app.py --debug run*
 3. Connect your MongoDB database (if you haven't created the database yet, go to previous section Installation).
 3. Type "localhost:5000" in your browser's search bar.
 4. Enjoy.
