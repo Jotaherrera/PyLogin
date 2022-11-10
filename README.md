@@ -23,7 +23,7 @@ This application provides:
  3. Create a Database named **py_login**.
  4. Inside py_login create a collection named **users**.
 
-### Quick start
+### Quickstart
 _________________
 
 1. On your terminal access the project folder and activate the virtual environment: source venv/scripts/activate
