@@ -2,6 +2,7 @@ from flask import Flask, render_template, session, redirect
 from functools import wraps
 import pymongo
 
+# Flask App
 app = Flask(__name__)
 app.secret_key = b"\xfa\x1aX\x9eP\xb2\xff\x8c\xe9C\xf6R\x07\x05\xe7\x07"
 
